@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Результат</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Самое частое слово:</h1>
+        <p>{{ most_common_word }}</p>
+        <p>Встречается {{ most_count }} раз(а) в тексте</p>
+
+        <h2>Все слова и их количество:</h2>
+        <table class="word-table">
+            <thead>
+                <tr>
+                    <th>Слово</th>
+                    <th>Количество</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for word, count in word_counts.items() %}
+                <tr>
+                    <td>{{ word }}</td>
+                    <td>{{ count }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <form action="/">
+            <input type="submit" value="Назад">
+        </form>
+    </div>
+</body>
+</html>

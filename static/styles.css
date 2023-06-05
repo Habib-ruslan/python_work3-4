@@ -1,0 +1,55 @@
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+h1 {
+    color: #333;
+}
+
+input[type="file"] {
+    margin-top: 10px;
+}
+
+input[type="submit"] {
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+/* Стили для страницы с результатами (result.html) */
+.word-table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.word-table th,
+.word-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.word-table th {
+    background-color: #f2f2f2;
+}
+
+.result-message {
+    margin-top: 16px;
+}
