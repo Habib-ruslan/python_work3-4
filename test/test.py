@@ -13,7 +13,7 @@ class FlaskAppTests(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertIn('Поиск самого частого слова в файле', response.data.decode())
 
-    def test_invalid_file_extension_route(self):
+    def test_result(self):
         with open('../text.txt', 'rb') as file:
             response = self.app.post('/', data={'file': file})
             self.assertEqual(response.status_code, 200)
